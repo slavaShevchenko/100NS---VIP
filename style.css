@@ -656,6 +656,16 @@ h2 {
         left: 0;
         top: 0;
     }
+    
+    
+    /* footer */
+    .footer__logo {
+        margin-bottom: 20px;
+    }
+    .footer__logo svg {
+        width: 83px;
+        height: 23px;
+    }
 }
 
 
