@@ -17,6 +17,9 @@ $(document).ready(function() {
         spaceBetween: 30,
         roundLengths: true,
         slidesPerView: 4,
+        mousewheel: {
+            releaseOnEdges: true
+        },
         pagination: {
             el: '.swiper-pagination--winners',
             clickable: true,
@@ -39,17 +42,90 @@ $(document).ready(function() {
         }
     });
     
+    var swiperTabs = new Swiper('.swiper-container--tabs', {
+        autoHeight: true,
+        spaceBetween: 30,
+        grabCursor: true,
+        pagination: {
+            el: '.swiper-pagination--tabs',
+            clickable: true,
+            renderBullet: function (index, className) {
+                namesAr = this.slides;
+                namesEl = $(namesAr[index]).data('tabname');
+                return '<span class="' + className + '">' + namesEl + '</span>';
+            }
+        }
+    });
+    
+    var tempSlide, finalActiveSlide;
+    var swiperProductImgThumbs = new Swiper('.swiper-container--product-img-thumbs', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slideToClickedSlide: true,
+        breakpoints: {
+            575: {
+                spaceBetween: 15
+            }
+        },
+        navigation: {
+            nextEl: '.swiper-button-next--product-img-thumbs',
+            prevEl: '.swiper-button-prev--product-img-thumbs',
+        },
+        on: {
+            init: function() {
+                $('.swiper-container--product-img-thumbs').find('.swiper-slide-active').find('.product__thumb-item-img').addClass('product__thumb-item-img--active');
+            },
+            click: function() {
+                if(this.clickedIndex !== undefined && this.activeIndex <= this.clickedIndex) {
+                    tempSlide = this.clickedSlide;
+                    $('.swiper-container--product-img-thumbs').find('.product__thumb-item-img--active').removeClass('product__thumb-item-img--active');
+                    $(tempSlide).find('.product__thumb-item-img').addClass('product__thumb-item-img--active');
+                    finalActiveSlide = $('.swiper-container--product-img-thumbs').find('.product__thumb-item-img--active').parents('.swiper-slide').index();
+                    swiperProductImg.slideTo(finalActiveSlide);
+                }
+            },
+            slideChangeTransitionEnd: function() {
+                if(this.clickedIndex !== undefined && this.isEnd) {}
+                else {
+                    $('.swiper-container--product-img-thumbs').find('.product__thumb-item-img--active').removeClass('product__thumb-item-img--active');
+                    $('.swiper-container--product-img-thumbs').find('.swiper-slide-active').find('.product__thumb-item-img').addClass('product__thumb-item-img--active');
+                    finalActiveSlide = $('.swiper-container--product-img-thumbs').find('.product__thumb-item-img--active').parents('.swiper-slide').index();
+                    swiperProductImg.slideTo(finalActiveSlide);
+                    this.clickedIndex = undefined;
+                }
+            }
+        }
+    });
+    var swiperProductImg = new Swiper('.swiper-container--product-img', {
+        spaceBetween: 30,
+        on: {
+            slideChange: function() {
+                swiperProductImgThumbs.slideTo(this.activeIndex);
+                tempSlide = swiperProductImgThumbs.slides[this.activeIndex];
+                $('.swiper-container--product-img-thumbs').find('.product__thumb-item-img--active').removeClass('product__thumb-item-img--active');
+                $(tempSlide).find('.product__thumb-item-img').addClass('product__thumb-item-img--active');
+            }
+        }
+    });
+    
     
     
     /* mobile menu */
-    $('.mobile-menu__trigger').on('click', function(e) {
-        e.preventDefault;
-        $('.mobile-menu').show().stop().animate({opacity: 1}, 300);
+    $('.mobile-menu__trigger').on('click', function(event) {
+        event.preventDefault;
+        $(this).addClass('mobile-menu__trigger--active');
+        event.stopPropagation();
     });
-    $('.mobile-menu__close').on('click', function(e) {
-        e.preventDefault;
-        $('.mobile-menu').stop().animate({opacity: 0}, 300, function() {
-            $(this).hide();
-        });
+    $(document).on('click', function(event) {
+        if($('.mobile-menu__trigger--active').length) {
+            if($(event.target).closest('.mobile-menu').length) return;
+            $('.mobile-menu__trigger').removeClass('mobile-menu__trigger--active');
+            event.stopPropagation();
+        }
     });
+    
+    
+    
+    /* telephone mask */
+    $('input[type="tel"]').mask("(+234) 99 - 999 - 99 - 99");
 });
