@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>0D54E888-1AFF-4E12-8594-F0E8A0925F4E</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Purchase-History" transform="translate(-1621.000000, -476.000000)" fill="#566876" fill-rule="nonzero">
+            <g id="Content">
+                <g transform="translate(530.000000, 189.000000)" id="1">
+                    <g transform="translate(40.000000, 254.000000)">
+                        <g id="ticket" transform="translate(992.000000, 29.000000)">
+                            <g id="arrow-point-to-right" transform="translate(67.000000, 9.000000) rotate(90.000000) translate(-67.000000, -9.000000) translate(62.000000, 1.000000)">
+                                <path d="M8.99424377,8.78909735 L1.96052293,15.6663009 C1.51309332,16.104 0.787662912,16.104 0.340450523,15.6663009 C-0.106798069,15.2289912 -0.106798069,14.5197168 0.340450523,14.0824425 L6.56420756,7.99716814 L0.340631537,1.91210619 C-0.106617056,1.47461947 -0.106617056,0.765415929 0.340631537,0.328106195 C0.787880129,-0.109380531 1.51327434,-0.109380531 1.96070394,0.328106195 L8.99442478,7.20541593 C9.21804907,7.42417699 9.32973451,7.71058407 9.32973451,7.99713274 C9.32973451,8.28382301 9.21783186,8.57044248 8.99424377,8.78909735 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

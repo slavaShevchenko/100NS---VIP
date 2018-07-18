@@ -128,4 +128,37 @@ $(document).ready(function() {
     
     /* telephone mask */
     $('input[type="tel"]').mask("(+234) 99 - 999 - 99 - 99");
+    
+    
+    
+    /* select2 */
+    if($('.select2-item').length) {
+        $('.select2-item').select2({
+            width : '100%',
+            minimumResultsForSearch: Infinity,
+            theme: 'vip100ns'
+        });
+    }
+    
+    $('.select2-item').on('select2:open', function(e){
+        $('.select2-results__options').scrollbar().parent().addClass('scrollbar-inner');
+    });
+    
+    
+    
+    /* more-less */
+    var valTemp;
+    $('.more-less__button--more').on('click', function() {
+		valTemp = Number($(this).parents('.more-less').find('.more-less__input').val());
+		valTemp = valTemp + 100;
+		$(this).parents('.more-less').find('.more-less__input').val(valTemp);
+	});
+	$('.more-less__button--less').on('click', function() {
+		valTemp = Number($(this).parents('.more-less').find('.more-less__input').val());
+		valTemp = valTemp - 100;
+		if(valTemp <= 0) {}
+		else {
+			$(this).parents('.more-less').find('.more-less__input').val(valTemp);
+		}
+	});
 });

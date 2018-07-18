@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>8CCABE05-98E5-4852-86AD-422382821295</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="User-Profile" transform="translate(-1137.000000, -894.000000)">
+            <g id="Content">
+                <g transform="translate(530.000000, 189.000000)" id="Password">
+                    <g transform="translate(40.000000, 585.000000)">
+                        <g id="New-Password:" transform="translate(1.000000, 65.000000)">
+                            <g id="Input" transform="translate(0.000000, 33.000000)">
+                                <rect id="Rectangle-2-Copy" stroke="#D2DCE7" x="0.5" y="0.5" width="601" height="54" rx="27"></rect>
+                                <g id="eye-close-up" opacity="0.7" transform="translate(566.000000, 22.000000)" fill="#566876" fill-rule="nonzero">
+                                    <path d="M7.99271168,0.0103278689 C4.46688103,0.0103278689 1.42808146,2.39459016 0.0321543408,5.8352459 C-0.0107181136,5.9395082 -0.0107181136,6.06147541 0.0321543408,6.16770492 C1.42808146,9.60834098 4.46689818,11.992623 7.99271168,11.992623 C11.5185252,11.992623 14.5573419,9.60836066 15.953269,6.16770492 C15.9961415,6.06344262 15.9961415,5.94147541 15.953269,5.8352459 C14.5573419,2.39459016 11.5185423,0.0103278689 7.99271168,0.0103278689 Z M7.99271168,10.1355934 C6.0017149,10.1355934 4.38971061,8.28442623 4.38971061,6.00245902 C4.38971061,3.71852459 6.0034298,1.86934426 7.99271168,1.86934426 C9.98370847,1.86934426 11.5957128,3.7204918 11.5957128,6.00245902 C11.5957128,8.28442623 9.98199357,10.1355934 7.99271168,10.1355934 Z" id="Shape"></path>
+                                    <ellipse id="Oval" cx="7.99271168" cy="6.0004918" rx="2.30653805" ry="2.64590164"></ellipse>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
