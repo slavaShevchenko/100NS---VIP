@@ -687,6 +687,30 @@ textarea.prizes__item-amount {
     font-size: 18px;
     line-height: 18px;
 }
+.winners-page__pagination {
+    padding-top: 40px;
+}
+.winners-page__pagination-pages-arrows {
+    display: block;
+}
+.winners-page__pagination-pages-arrows:hover svg g {
+    fill: #c49f56;
+}
+.winners-page__pagination-pages-item {
+	display: block;
+    margin: 0 5px;
+    padding: 0 5px;
+    border-bottom: 4px solid #566876;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(86,104,116,0.75);
+    position: relative;
+    bottom: 0;
+}
+.winners-page__pagination-pages-item--active {
+    border-bottom: 4px solid #c49f56;
+    bottom: 10px;
+}
 
 
 
@@ -1548,6 +1572,12 @@ textarea.prizes__item-amount {
     }
 }
 @media (max-width: 767px) {
+    /* WINNERS */
+    .winners-page__pagination-pages {
+        margin-bottom: 30px;
+    }
+    
+    
     /* ABOUT US */
     .swiper-pagination--tabs .swiper-pagination-bullet {
         display: block;
@@ -1774,6 +1804,12 @@ textarea.prizes__item-amount {
     .winners-page__line-text {
         font-size: 16px;
         line-height: 16px;
+    }
+    .winners-page__pagination-pages-item {
+        margin: 0 3px;
+        padding: 0 3px;
+        font-size: 14px;
+        line-height: 24px;
     }
     
     
